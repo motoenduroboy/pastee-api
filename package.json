@@ -1,0 +1,9 @@
+{
+  "name": "pasteeAPI",
+  "description": "An API to communicate with paste.ee",
+  "main": "index.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
