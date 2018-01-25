@@ -1,5 +1,5 @@
 {
-  "name": "pasteeAPI",
+  "name": "pastee-api",
   "description": "An API to communicate with paste.ee",
   "author": "motoenduroboy",
   "main": "index.js",
