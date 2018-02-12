@@ -1,5 +1,4 @@
 const 	request 	= require('request');
-const 	util 	= require('util');
 
 function PasteeAPI(key) {
     this.key = key || "";
@@ -10,7 +9,9 @@ PasteeAPI.prototype.paste = function (data) {
         if (typeof data === "string") {
             data = { "contents" : data };
         }
-        if (!data.content) {reject("content is required");}
+        if (!data.contents) {
+            reject("content is required");
+        }
         let header = {
             "X-Auth-Token": this.key,
             "Content-Type": "application/json"
@@ -30,7 +31,7 @@ PasteeAPI.prototype.paste = function (data) {
             body:       JSON.stringify(body, null, 2)
         }, function (err, res, body) {
             if (err) {reject(err);}
-            console.log(util.inspect(body));
+            resolve(JSON.parse(body));
         });
     });
 };
