@@ -3,7 +3,7 @@
   "description": "An API to communicate with paste.ee",
   "author": "motoenduroboy",
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "request": "^2.83.0"
   },
@@ -14,7 +14,9 @@
   "license": "MIT",
   "keywords": [
     "pastee",
-    "paste.ee"
+    "paste.ee",
+    "pastee api",
+    "paste.ee api"
   ],
   "bugs": {
     "url": "https://github.com/motoenduroboy/pasteeAPI/issues"
