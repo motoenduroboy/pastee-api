@@ -3,7 +3,7 @@
   "description": "An API to communicate with paste.ee",
   "author": "motoenduroboy",
   "main": "index.js",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "dependencies": {
     "request": "^2.83.0"
   },
