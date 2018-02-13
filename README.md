@@ -1,4 +1,6 @@
 # pasteeAPI 
+[![NPM](https://nodei.co/npm/pastee-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/pastee-api/)
+
 [![Build Status](https://travis-ci.org/motoenduroboy/pastee-api.svg?branch=master)](https://travis-ci.org/motoenduroboy/pasteeAPI) 
 
 An API to communicate with paste.ee (Unoffical)
