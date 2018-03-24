@@ -10,7 +10,7 @@ PasteeAPI.prototype.paste = function (data) {
             data = { "contents" : data };
         }
         if (!data.contents) {
-            reject("content is required");
+            reject(new Errror("content is required"));
         }
         let header = {
             "X-Auth-Token": this.key,
@@ -23,7 +23,8 @@ PasteeAPI.prototype.paste = function (data) {
                 "name":     data.name || "",
                 "syntax":   "autodetect",
                 "contents":  data.contents
-            }]
+            }],
+            "expire": data.expire
         };
         request.post({
             headers:    header,
@@ -31,7 +32,11 @@ PasteeAPI.prototype.paste = function (data) {
             body:       JSON.stringify(body, null, 2)
         }, function (err, res, body) {
             if (err) {reject(err);}
-            resolve(JSON.parse(body));
+            try {
+              resolve(JSON.parse(body));
+            } catch (err) {
+              reject(err);
+            }
         });
     });
 };
